@@ -1,0 +1,21 @@
+[project]
+name = "dpdp-comply"
+version = "0.1.0"
+description = "DPDP Act 2023 compliance automation library"
+requires-python = ">=3.11"
+dependencies = [
+    "pydantic>=2.0",
+    "psycopg[binary]>=3.1",
+    "ulid-py>=1.1",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7.0", "pytest-cov"]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.backends.legacy:build"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
